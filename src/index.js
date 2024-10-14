@@ -22,7 +22,8 @@ function generateLimerick(event) {
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
   let limerickElement = document.querySelector("#limerick");
-  limerickElement.innerHTML = "Generating a limerick for you...";
+  limerickElement.classList.remove("hidden");
+  limerickElement.innerHTML = `Generating a limerick about ${instructionsInput.value} for you...`;
 
   console.log("Generating limerick...");
   console.log(`Prompt: ${prompt}`);

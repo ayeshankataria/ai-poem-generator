@@ -20,19 +20,22 @@
     </header>
 
     <main>
-      <form id="limerick-generator-form">
-        <input 
-          type="text" 
-          placeholder="Enter the topic of the limerick"
-          autofocus
-          required
-          autocomplete="off"
-          class="instructions"
-          id="user-instructions"
-        />
-        <input type="submit" class="submit-button"/>   
-      </form>
-      <div class="limerick" id="limerick">
+      <div class="form-container">
+        <form id="limerick-generator-form">
+          <input 
+            type="text" 
+            placeholder="Enter the topic of the limerick"
+            autofocus
+            required
+            autocomplete="off"
+            class="instructions"
+            id="user-instructions"
+          />
+          <input type="submit" class="submit-button"/>   
+        </form>
+        <div class="hint">i.e. planes, flowers, coffee</div>
+      </div>
+      <div class="limerick hidden" id="limerick">
         
       </div>
     </main>
