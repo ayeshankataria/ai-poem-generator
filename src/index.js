@@ -1,6 +1,4 @@
 function displayLimerick(response) {
-  console.log("poem generated");
-
   new Typewriter("#limerick", {
     strings: response.data.answer,
     autoStart: true,
@@ -24,10 +22,6 @@ function generateLimerick(event) {
   let limerickElement = document.querySelector("#limerick");
   limerickElement.classList.remove("hidden");
   limerickElement.innerHTML = `Generating a limerick about ${instructionsInput.value} for you...`;
-
-  console.log("Generating limerick...");
-  console.log(`Prompt: ${prompt}`);
-  console.log(`Context: ${context}`);
 
   axios.get(apiUrl).then(displayLimerick);
 }
